@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prisijungti</title>
+    <style>
+
+        body{
+
+            background: linear-gradient(to right, rgb(130, 123, 2), rgb(87, 124, 157));
+        }
+
+        .div1{
+
+        }
+        .Loginas{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .input-loginas{
+            padding-bottom: 10px;
+            background-color: transparent;
+            cursor: pointer;
+
+
+        }
+
+        .button-login{
+            margin-bottom: 10px;
+            cursor: pointer;
+
+        }
+        .button-register{
+            margin-bottom: 10px;
+            cursor: pointer;
+
+        }
+        .chooseGenre{
+            margin-bottom: 10px;
+            cursor: pointer;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<p style="color: #000000;">admin: admin, 123456</p>
+<p style="color: #000000;">Klientas: Vardas478, 123456</p>
+
+<div class="div1">
+
+    <div class="Loginas">
+        <h1>Prisijungti</h1>
+        <div class="input-loginas">
+            <input id="vardas" type="text" placeholder="Vardas">
+        </div>
+        <div class="input-loginas">
+            <input id="slaptazodis" type="password" placeholder="Slaptazodis">
+
+        </div>
+
+
+        <select class="chooseGenre" id="">
+            <option id="ktg" > -kategorija- </option>
+            <option id="Siaubo" value="Siaubo">Siaubo filmai</option> <br>
+            <option id="Veiksmo" value="Veiksmo">Veiksmo filmai</option>
+        </select>
+
+        <button onclick="prisijungti()" id="loginas" class="button-login"><strong>Prisijunkti</strong></button>
+        <button onclick="registruotis()" id="register" class="button-register" type="reset" ><strong>Registracija</strong></button>
+
+
+
+
+    </div>
+</div>
+<script>
+
+
+    function prisijungti() {
+        const vardas = document.getElementById('vardas').value;
+        const slaptazodis = document.getElementById('slaptazodis').value;
+
+        if (vardas == "Vardas478" && slaptazodis == "123456" && document.getElementById('Siaubo').selected){
+            window.location = "svetaine2.html";
+            return false;
+        }
+        else if (vardas == "Vardas478" && slaptazodis == "123456" && document.getElementById('Veiksmo').selected){
+            window.location = "svetaine2Veiksmo.html";
+            return false;
+        }
+        else if (vardas == "admin" && slaptazodis == "123456" && document.getElementById('Siaubo').selected){
+            window.location = "svetaine2admin.html";
+            return false;
+        }
+        else if (vardas == "admin" && slaptazodis == "123456" && document.getElementById('Veiksmo').selected){
+            window.location = "svetaine2Veiksmo.html";
+            return false;
+        }
+        else  if (vardas == "admin" && slaptazodis == "123456" && document.getElementById('ktg').selected){
+            alert("Jus nepasirinkote kategorijos.");
+            return false;
+        }
+        else if (vardas == "Vardas478" && slaptazodis == "123456" && document.getElementById('ktg').selected){
+            alert("Just nepasirinkote kategorijos");
+        }
+        else {
+            alert('Slaptazodis arba prisijungimo vardas neteisingas!')
+        }
+    }
+
+    function registruotis () {
+        window.location = "svetaineReg.html";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geriausi 2023 metu siaubo filmai</title>
+    <style>
+        body{
+
+            background: linear-gradient(to left, rgb(130, 123, 2), rgb(87, 124, 157));
+        }
+        .div1{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .ieskotiButton{
+            border-radius: 10px;
+            border: none;
+            border-bottom:2px solid black;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+        .atsijungtiButton{
+            border-radius: 10px;
+            border: none;
+            border-bottom:2px solid black;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+
+
+        .ieskotiFilmu{
+
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        .div2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .pasirinkti{
+            border: none;
+            border-bottom:2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+        .ieskotiInput
+        {
+            border: none;
+            border-bottom:2px solid black;
+            border-radius: 10px;
+            outline: none;
+            padding: 10px;
+        }
+        .pasirinktiButton{
+            border: none;
+            border-bottom:2px solid black;
+            border-radius: 10px;
+            outline: none;
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="name-user">
+            <h1><u>Sveiki, Vardas478</u></h1>
+        </div>
+
+        <div class="ieskotiFilmu"><input id="inputFilmas" class="ieskotiInput" placeholder="Ieskoti filmu" type="text"></div>
+        <div class="btn1"><button onclick="tikrinti()" id="tikrintiButton" class="ieskotiButton"><strong>Ieskoti</strong></button></div>
+        <div class="btn2"><button onclick="atsijungti()" class="atsijungtiButton"><strong>Atsijungti</strong></button> </div>
+
+    </div>
+    <div class="div2">
+
+        <div class=""> <p> Arba pasirinkite filma apacioje </p></div>
+
+
+            <select class="pasirinkti" id="filmai2023">
+                <option id="TalkToMe2" value="TalkToMe" selected>Talk to Me</option>
+                <option id="SawX2" value="SawX" >Saw X</option>
+                <option id="EvilDeadRise2" value="EvilDeadRise" >Evil Dead Rise</option>
+                <option id="TotallyKiller2" value="TotallyKiller">Totally Killer</option>
+                <option id="ScreamVI2" value="ScreamVI" >Scream VI</option>
+            </select>
+
+        <button onclick="Pasirinkti()" id="PasirinktiButton" type="submit" class="pasirinktiButton"><strong>Pasirinkti</strong> </button></button>
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
