@@ -75,6 +75,31 @@
             cursor: pointer;
         }
 
+        .filmuPav{
+
+            margin-top: 10px;
+            color: white;
+            background: linear-gradient(to right, rgb(130, 123, 2), rgb(87, 124, 157));
+            border-image: linear-gradient(to right, rgb(18, 8, 21), rgba(122, 47, 0, 0.82)) 1;
+            border-width: 4px;
+            border-style: solid;
+
+        }
+        .table{
+            margin-left: 10px;
+            text-align: left;
+        }
+        .span1{
+            animation: color-text 0.7s infinite;
+        }
+
+        @keyframes color-text {
+            50% { color: rgb(255, 30, 1); }
+            75% { color: rgb(255, 225, 0); }
+            100% { color: rgb(255, 0, 0)}
+        }
+
+
 
     </style>
 </head>
@@ -85,7 +110,7 @@
         </div>
 
         <div class="ieskotiFilmu"><input id="inputFilmas" class="ieskotiInput" placeholder="Ieskoti filmu" type="text"></div>
-        <div class="btn1"><button onclick="tikrinti()" id="tikrintiButton" class="ieskotiButton"><strong>Ieskoti</strong></button></div>
+        <div class="btn1"><button onclick="tikrintis()" id="tikrintiButton" class="ieskotiButton"><strong>Ieskoti</strong></button></div>
         <div class="btn2"><button onclick="atsijungti()" class="atsijungtiButton"><strong>Atsijungti</strong></button> </div>
 
     </div>
@@ -105,12 +130,74 @@
         <button onclick="Pasirinkti()" id="PasirinktiButton" type="submit" class="pasirinktiButton"><strong>Pasirinkti</strong> </button></button>
 
 
-
+        <div class="filmuPav">
+            <p><strong>Top 5 Geriausiu 2023 metu siaubo filmu(is imdb) </strong></p>
+            <table class="table" id="addFilmai">
+                <tr id="tr1">
+                    <th>
+                        <span class="span1" style="color: gold">TOP 1</span> Talk to me su 8.4 reitingu
+                    </th>
+                </tr>
+                <tr id="tr2">
+                    <th>
+                        <span class="span1" style="color: gold">TOP 2</span> Saw X su 7.6 reitingu
+                    </th>
+                </tr>
+                <tr id="tr3">
+                    <th>
+                        <span class="span1" style="color: gold">TOP 3</span> Evil Dead Rise su 7.4 reitingu
+                    </th>
+                </tr>
+                <tr id="tr4">
+                    <th>
+                        <span class="span1" style="color: gold">TOP 4</span> Totally Killer su 7.3 reitingu
+                    </th>
+                </tr>
+                <tr id="tr5">
+                    <th>
+                        <span class="span1" style="color: gold">TOP 5</span> Scream VI su 7.1 reitingu
+                    </th>
+                </tr>
+            </table>
+        </div>
 
 
 
 
 
     </div>
+<script>
+
+    function tikrintis (){
+
+        const Filmas = document.getElementById('inputFilmas').value;
+        const mgtk = document.getElementById('tikrintiButton').value;
+
+        if (Filmas == "Talk to me" || Filmas == "talk to me"){
+            window.location = "TalkToMe.html";
+            return false;
+        }
+        else if (Filmas == "Saw X" || Filmas == "saw x"){
+            window.location = "SawX.html";
+            return false;
+        }
+        else  if (Filmas == "Evil Dead Rise" || Filmas == "evil dead rise"){
+            window.location = "EvilDeadRise.html";
+            return false;
+        }
+        else if (Filmas == "Totally Killer" || Filmas == "totally killer"){
+            window.location = "TotallyKiller.html";
+            return false;
+        }
+        else if (Filmas == "Sream VI" || Filmas == "scream vi"){
+            window.location = "ScreamVI.html"
+        }
+
+            else {
+                alert('Tokio filmo nera!')
+        }
+    }
+
+</script>
 </body>
 </html>
