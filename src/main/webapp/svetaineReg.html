@@ -2,9 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prisijungti</title>
+    <style>
+
+        body{
+
+            background: linear-gradient(to right, rgb(130, 123, 2), rgb(87, 124, 157));
+        }
+
+        .div1{
+
+        }
+        .Loginas{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+
+
+
+        }
+
+        .input-loginas{
+            padding-bottom: 10px;
+
+            border-radius: 10px;
+            border: none;
+            border-bottom:2px solid black;
+            margin-top: 20px;
+
+
+
+
+        }
+
+        .button-login{
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            border-radius: 10px;
+            border: none;
+            border-bottom:2px solid black;
+            margin-top: 10px;
+            padding: 10px;
+
+
+        }
+        .buttonregister{
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            border-radius: 10px;
+            border: none;
+            border-bottom:2px solid black;
+            margin-top: 10px;
+            padding: 10px;
+
+
+        }
+
+        .buttonback{
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            border-radius: 10px;
+            border: none;
+            border-bottom:2px solid black;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+
+
+
+
+    </style>
+
+
 </head>
 <body>
-    <h1>reg</h1>
+
+
+<div class="div1">
+
+    <div class="Loginas">
+        <h1>Registracija:</h1>
+        <div class="input-loginas">
+            <input id="vardas" type="text" placeholder="Vardas">
+        </div>
+        <div class="input-loginas">
+            <input id="elPastas" type="text" placeholder="El. Pastas">
+        </div>
+        <div class="input-loginas">
+            <input id="slaptazodis" type="password" placeholder="Slaptazodis">
+
+        </div>
+        <div class="input-loginas">
+            <input id="slaptazodisX2" type="text" placeholder="Patvirtinti slaptazodi">
+        </div>
+
+
+
+
+        <button onclick="registruotis()" id="register" type="reset" class="buttonregister"> <strong> Registruotis</strong> </button>
+        <button onclick="griztiAtgal()" id="atgal" class="buttonback">&lArr;</button>
+
+
+    </div>
+</div>
+<script>
+
+    function registruotis() {
+
+        const Vardas = document.getElementById('vardas').value;
+        const elPastas = document.getElementById('elPastas').value;
+        const Slaptazodis = document.getElementById('slaptazodis').value;
+        const SlaptazodisX2 = document.getElementById('slaptazodisX2').value;
+
+        if(Vardas == Vardas && elPastas == elPastas && Slaptazodis == Slaptazodis && SlaptazodisX2 == SlaptazodisX2  ) {
+            window.location = "svetaine2admin.html";
+        }
+
+
+
+    }
+
+
+    function griztiAtgal() {
+        window.location = "svetaine.html";
+    }
+
+
+</script>
 </body>
 </html>
