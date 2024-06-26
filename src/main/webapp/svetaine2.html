@@ -198,6 +198,37 @@
         }
     }
 
+    function Pasirinkti (){
+        const TalkToMe = document.getElementById('TalktoMe2');
+        const SawX = document.getElementById('SawX2');
+        const EvilDeadRise = document.getElementById('EvilDeadRise2');
+        const TotallyKiller = document.getElementById('TotallyKiller2');
+        const ScreamVI = document.getElementById('ScreamVI2');
+
+        if (TalkToMe.selected){
+            window.location = "TalkToMe.html";
+        }
+        else if (SawX.selected){
+            window.location = "SawX.html";
+
+        }
+        else if (EvilDeadRise.selected){
+            window.location = "EvilDeadRise.html";
+        }
+        else if (TotallyKiller.selected){
+            window.location = "TotallyKiller.html";
+        }
+        else if (ScreamVI.selected){
+            window.location = "ScreamVI.html"
+        }
+        else {alert("Nepasirinkote filmo")}
+
+    }
+
+    function atsijungti() {
+        window.location = "svetaine.html";
+
+    }
 </script>
 </body>
 </html>
